@@ -1,0 +1,293 @@
+* {
+  padding: 10px;
+  text-align: center;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+body {
+  background-color: orangered;
+}
+
+/* Game Container */
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.game-title {
+  font-size: 60px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+/* Number of games played Section */
+
+.games-score {
+  visibility: hidden;
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+/* Username Section */
+
+.username-container {
+  padding: 15px;
+}
+.input {
+  border-radius: 50%;
+  border: 10px solid white;
+  -webkit-filter: drop-shadow(10px 10px 0px black);
+  filter: drop-shadow(10px 10px 0px black);
+}
+#name-input {
+  border-radius: 50%;
+  border: 20px solid white;
+  -webkit-filter: drop-shadow(10px 10px 0px black);
+  filter: drop-shadow(10px 10px 0px black);
+}
+.confirm-button {
+  font-size: 20px;
+  color: white;
+  background-color: orange;
+  border-radius: 50%;
+  border: 10px solid white;
+  -webkit-filter: drop-shadow(10px 10px 0px black);
+  filter: drop-shadow(10px 10px 0px black);
+}
+/* Ingame Section */
+.ingame {
+  visibility: hidden;
+}
+
+/* Score Section */
+.score {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 20px;
+  /* background-color: blue; */
+}
+.wins-score {
+  color: white;
+  display: table-cell;
+  background-color: green;
+  margin: 100px;
+  width: 150px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid white;
+  -webkit-filter: drop-shadow(10px 10px 0px black);
+  filter: drop-shadow(10px 10px 0px black);
+}
+.wins-count {
+  background-color: orangered;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 0 solid black;
+  border-width: 5px 0 0px 5px;
+  font-size: 20px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.draws-score {
+  color: white;
+  display: table-cell;
+  background-color: grey;
+  width: 150px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid white;
+  -webkit-filter: drop-shadow(10px 10px 0px black);
+  filter: drop-shadow(10px 10px 0px black);
+}
+.draws-count {
+  background-color: orangered;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 0 solid black;
+  border-width: 5px 0 0px 5px;
+  font-size: 20px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.losses-score {
+  color: white;
+  display: table-cell;
+  background-color: red;
+  width: 150px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid white;
+  -webkit-filter: drop-shadow(10px 10px 0px black);
+  filter: drop-shadow(10px 10px 0px black);
+}
+.losses-count {
+  background-color: orangered;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 0 solid black;
+  border-width: 5px 0 0px 5px;
+  font-size: 20px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+/* Player & Computer Weapons Display */
+#player-weapon {
+  -webkit-filter: drop-shadow(10px 10px 0px black);
+  filter: drop-shadow(10px 10px 0px black);
+}
+#computer-weapon {
+  -webkit-filter: drop-shadow(10px 10px 0px black);
+  filter: invert(100%) drop-shadow(10px 10px 0px black);
+}
+/* Player Options Section */
+.move {
+  font-size: 30px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.options {
+  padding: 5px;
+}
+
+#rock {
+  margin: 20px;
+  background: none;
+  border-radius: 50%;
+  border: 10px solid white;
+  -webkit-filter: drop-shadow(10px 10px 0px black);
+  filter: drop-shadow(10px 10px 0px black);
+}
+#paper {
+  margin: 20px;
+  background: none;
+  border-radius: 50%;
+  border: 10px solid white;
+  -webkit-filter: drop-shadow(10px 10px 0px black);
+  filter: drop-shadow(10px 10px 0px black);
+}
+#scissors {
+  margin: 20px;
+  background: none;
+  border-radius: 50%;
+  border: 10px solid white;
+  -webkit-filter: drop-shadow(10px 10px 0px black);
+  filter: drop-shadow(10px 10px 0px black);
+}
+
+/* Reset Button */
+#reset {
+  font-size: 20px;
+  color: white;
+  background-color: hotpink;
+  border-radius: 50%;
+  border: 10px solid white;
+  -webkit-filter: drop-shadow(10px 10px 0px black);
+  filter: drop-shadow(10px 10px 0px black);
+}
+
+/* Animations */
+
+.wins-score {
+  animation: float 5s ease-in-out infinite;
+}
+.draws-score {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 3.5s;
+}
+.losses-score {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0% {
+    line-height: 40px;
+    transform: translatey(0px);
+  }
+  55% {
+    transform: translatey(-50px);
+  }
+  60% {
+    line-height: 10px;
+  }
+  100% {
+    line-height: 40px;
+    transform: translatey(0px);
+  }
+}
+
+button:hover {
+  cursor: pointer;
+  -webkit-animation: shake-vertical 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955)
+    both;
+  animation: shake-vertical 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}
+@keyframes shake-vertical {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  80% {
+    -webkit-transform: translateY(6.4px);
+    transform: translateY(6.4px);
+  }
+  90% {
+    -webkit-transform: translateY(-6.4px);
+    transform: translateY(-6.4px);
+  }
+}

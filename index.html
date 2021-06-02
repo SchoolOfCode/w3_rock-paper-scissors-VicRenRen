@@ -2,8 +2,74 @@
 <html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Rock, Paper, Scissors</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+    <section class="game">
+
+      <!-- Big Title -->
+      <div class="game-title">Rock Paper Scissors!</div>
+
+      <!--Number of games played -->
+      <div class="games-score">Games Played: 0</div>
+
+      <!-- Username -->
+      <div class="username-container">
+        <form class="input">
+        <input
+          type="text" 
+          placeholder="Enter Your Name Here"
+          pattern="[A-Za-z]{1,10}"
+          id="name-input"
+          title="Maximum 10 letters!" required />
+          <button type="button" class="confirm-button">LET'S GO!</button>
+        </div>
+        
+      <section class="ingame">
+      <!-- Score: wins, Draws, Losses -->
+       <div class="score">
+
+        <div class="wins-score">
+          <h2>Wins</h2>
+          <p class="wins-count">0</p>
+        </div>
+        
+        <div class="draws-score">
+          <h2>Draws</h2>
+          <p class="draws-count">0</p>
+        </div>
+
+        <div class="losses-score">
+          <h2>Losses</h2>
+          <p class="losses-count">0</p>
+        </div>
+
+       </div>
+       
+       <img id="player-weapon" src="/RPS-assets\unknown.png">
+       <img id="computer-weapon" src="/RPS-assets\unknown.png">
+      
+      <!-- Tells player to select option -->
+      <div class="move">Pick your weapon!</div>
+
+      <!--Player Options-->
+      <div class="options">
+        <button type="button" id="rock"><img src="/RPS-assets\rock-hand.png"></button>
+        <button type="button" id="paper"><img src="/RPS-assets\paper-hand.png"></button>
+        <button type="button" id="scissors"><img src="/RPS-assets\scissors-hand.png"></button>
+      </div>
+
+      <br>
+
+      <!--Reload the game/page -->
+      <button type="button" id="reset">Reset</button>
+      <!--(o_o)-->
+      </section>
+    </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
 </html>
